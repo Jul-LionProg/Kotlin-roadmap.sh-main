@@ -74,3 +74,9 @@ fun main () {
     val keyPair = AsymmetricCryptoUtil.generateKeyPair()
     val publicKey = keyPair.public
     val privateKey = keyPair.private
+
+    // Gera uma chave simétrica
+    val symetricKey = AsymmetricCryptoUtil.generateSymetricKey()
+
+    // Encripta a chave simétrica com a chave publica
+    val encryptedSymetricKey = AsymmetricCryptoUtil.encryptSymmetricKey(symetricKey, publicKey)
