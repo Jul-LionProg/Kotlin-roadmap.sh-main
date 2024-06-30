@@ -13,3 +13,9 @@ import java.util.Base64
 object AsymmetricCryptoUtil {
     private const val RSA_ALGORITHM = "RSA"
     private const val ALGORITHM = "AES"
+
+    fun generateKeyPair(): KeyPair {
+        val keyPairGenerator = KeyPairGenerator.getInstance(RSA_ALGORITHM)
+        keyPairGenerator.initialize(2048)
+        return keyPairGenerator.generateKeyPair()
+    }
