@@ -68,3 +68,9 @@ object AsymmetricCryptoUtil {
         return SecretKeySpec(decryptedBytes, ALGORITHM)
     }
 }
+
+fun main () {
+    // Gera um par de chaves RSA
+    val keyPair = AsymmetricCryptoUtil.generateKeyPair()
+    val publicKey = keyPair.public
+    val privateKey = keyPair.private
