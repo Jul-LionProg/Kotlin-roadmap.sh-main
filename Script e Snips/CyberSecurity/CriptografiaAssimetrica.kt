@@ -119,3 +119,15 @@ fun main () {
 
 9. Por que é necessário usar Base64 na criptografia e descriptografia?
    Base64 converte dados binários em texto, permitindo a transmissão ou armazenamento em sistemas que não suportam dados binários diretamente, garantindo que dados criptografados possam ser enviados por qualquer meio de comunicação que suporte texto.
+
+10. Descreva o processo de criptografia de uma mensagem com a chave pública RSA.
+    Um objeto Cipher é inicializado no modo de criptografia com a chave pública RSA. Os dados são convertidos em bytes e processados pelo Cipher, resultando em bytes criptografados que são então codificados em Base64 para formar a mensagem criptografada final.
+
+11. Como o método decryptWithSymmetricKey() funciona para descriptografar dados?
+    O método decryptWithSymmetricKey() inicializa um objeto Cipher no modo de descriptografia com a chave secreta AES, decodifica os dados criptografados em Base64, processa com o Cipher e retorna os bytes descriptografados como string.
+
+12. Qual é o propósito do método encryptSymmetricKey()?
+    O método encryptSymmetricKey() criptografa uma chave secreta AES com a chave pública RSA, permitindo a transmissão segura da chave AES, que só pode ser descriptografada com a chave privada correspondente.
+
+13. Explique como o método decryptSymmetricKey() descriptografa uma chave secreta.
+    O método decryptSymmetricKey() usa a chave privada RSA para descriptografar uma chave secreta AES criptografada com a chave pública, decodifica a chave criptografada em Base64 e processa com um objeto Cipher no modo de descriptografia, retornando a chave AES original.
