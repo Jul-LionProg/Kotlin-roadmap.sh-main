@@ -110,3 +110,12 @@ fun main () {
 
 6. Como a chave simétrica AES é gerada no script?
    A chave AES é gerada pelo método generateSymmetricKey(), que usa um gerador de chaves configurado com 256 bits, garantindo forte segurança para a criptografia de dados.
+
+7. Explique o propósito do método encryptWithPublicKey().
+   O método encryptWithPublicKey() criptografa dados com a chave pública RSA, inicializando um objeto Cipher no modo de criptografia e retornando uma string Base64 dos bytes criptografados.
+
+8. Qual é a função do método decryptWithPrivateKey()?
+   O método decryptWithPrivateKey() descriptografa dados com a chave privada RSA, inicializando um objeto Cipher no modo de descriptografia e retornando a mensagem original como string.
+
+9. Por que é necessário usar Base64 na criptografia e descriptografia?
+   Base64 converte dados binários em texto, permitindo a transmissão ou armazenamento em sistemas que não suportam dados binários diretamente, garantindo que dados criptografados possam ser enviados por qualquer meio de comunicação que suporte texto.
