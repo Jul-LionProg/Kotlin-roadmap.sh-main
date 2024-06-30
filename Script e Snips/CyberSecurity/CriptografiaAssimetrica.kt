@@ -32,3 +32,10 @@ object AsymmetricCryptoUtil {
         val encryptedBytes = cipher.doFinal(data.toByteArray())
         return Base64.getEncoder().encodeToString(encryptedBytes)
     }
+
+    fun decryptWithPrivateKey(data: String, privateKey: PrivateKey): String {
+        val cipher = Cipher.getInstance(RSA_ALGORITHM)
+        cipher.init(Cipher.DECRYPT_MODE, privateKey)
+        val decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(data))
+        return String(decryptedBytes)
+    }
