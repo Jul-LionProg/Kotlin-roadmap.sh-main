@@ -80,3 +80,9 @@ fun main () {
 
     // Encripta a chave simétrica com a chave publica
     val encryptedSymetricKey = AsymmetricCryptoUtil.encryptSymmetricKey(symetricKey, publicKey)
+
+    // Decripta a chave simétrica com a chave privada
+    val decryptedSymetricKey = AsymmetricCryptoUtil.decryptSymmetricKey(encryptedSymetricKey, privateKey)
+
+    // Encripta a mensagem com a chave simétrica
+    val encryptedMessage = AsymmetricCryptoUtil.encryptWithSymetricKey("Hello World", decryptedSymetricKey)
