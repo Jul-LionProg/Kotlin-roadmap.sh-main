@@ -53,3 +53,10 @@ object AsymmetricCryptoUtil {
         val encryptedBytes = cipher.doFinal(data.toByteArray())
         return Base64.getEncoder().encodeToString(encryptedBytes)
     }
+
+    fun encryptSymmetricKey(symmetricKey: SecretKey, publicKey: PublicKey): String {
+        val cipher = Cipher.getInstance(RSA_ALGORITHM)
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey)
+        val encryptedBytes = cipher.doFinal(symmetricKey.encoded)
+        return Base64.getEncoder().encodeToString(encryptedBytes)
+    }
