@@ -86,3 +86,18 @@ fun main () {
 
     // Encripta a mensagem com a chave simétrica
     val encryptedMessage = AsymmetricCryptoUtil.encryptWithSymetricKey("Hello World", decryptedSymetricKey)
+
+    // Decripta a mensagem com a chave simétrica
+    val decryptedMessage = AsymmetricCryptoUtil.decryptWithSymetricKey(encryptedMessage, decryptedSymetricKey)
+}
+
+// Perguntas levantadas
+/*
+1. O que é criptografia assimétrica e como ela é usada em segurança de dados?
+   A criptografia assimétrica usa um par de chaves, uma pública e outra privada. A chave pública criptografa dados, e a chave privada descriptografa. Isso permite que qualquer pessoa envie uma mensagem segura para o destinatário, pois só o destinatário tem a chave privada necessária para a descriptografia.
+
+2. Qual a vantagem de usar a criptografia assimétrica em comparação à simétrica?
+   A vantagem principal é a capacidade de compartilhar a chave pública abertamente, enquanto a chave privada permanece secreta, solucionando o problema da troca segura de chaves que é um desafio na criptografia simétrica.
+
+3. Por que o RSA é uma escolha popular para criptografia assimétrica?
+   O RSA é amplamente usado devido à sua robustez e segurança, baseada na dificuldade de fatorar grandes números primos. Isso torna ataques de força bruta inviáveis para chaves de tamanho adequado.
