@@ -5,3 +5,4 @@ import java.security.KeyPairGenerator
 import java.security.PrivateKey
 import java.security.PublicKey
 import javax.crypto.Cipher
+import javax.crypto.SecretKey
