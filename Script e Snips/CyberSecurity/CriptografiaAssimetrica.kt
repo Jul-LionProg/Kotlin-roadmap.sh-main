@@ -9,3 +9,7 @@ import javax.crypto.SecretKey
 import javax.crypto.KeyGenerator
 import javax.crypto.spec.SecretKeySpec
 import java.util.Base64
+
+object AsymmetricCryptoUtil {
+    private const val RSA_ALGORITHM = "RSA"
+    private const val ALGORITHM = "AES"
