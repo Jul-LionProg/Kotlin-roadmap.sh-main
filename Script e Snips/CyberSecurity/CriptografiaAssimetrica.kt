@@ -40,6 +40,13 @@ object AsymmetricCryptoUtil {
         return String(decryptedBytes)
     }
 
+    fun decryptWithSymetricKey(data: String, key: SecretKey): String {
+        val cipher = Cipher.getInstance(ALGORITHM)
+        cipher.init(Cipher.DECRYPT_MODE, key)
+        val decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(data))
+        return String(decryptedBytes)
+    }
+
     fun encryptWithSymetricKey(data: String, key: SecretKey): String {
         val cipher = Cipher.getInstance(ALGORITHM)
         cipher.init(Cipher.ENCRYPT_MODE, key)
