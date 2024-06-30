@@ -151,4 +151,35 @@ fun main () {
     Criptografia assimétrica é usada para troca segura de chaves, assinaturas digitais, autenticação e criptografia de dados confidenciais onde a troca segura de chaves é crucial.
 
 20. Como a combinação de criptografia simétrica e assimétrica melhora a eficiência e segurança?
-   
+    A criptografia simétrica é eficiente para grandes volumes de dados, enquanto a assimétrica garante a segurança na troca de chaves. Combiná-las permite criptografar dados rapidamente e trocar chaves de forma segura.
+
+21. Qual é o papel do método decryptSymmetricKey() na combinação de RSA e AES?
+    O método decryptSymmetricKey() permite que a chave AES, criptografada com a chave pública RSA, seja descriptografada com a chave privada RSA, garantindo que apenas o destinatário pretendido possa acessar a chave AES para descriptografar os dados.
+
+22. Quais são as limitações da criptografia assimétrica?
+    Criptografia assimétrica é mais lenta que a simétrica e requer maiores recursos computacionais. Portanto, não é ideal para criptografar grandes volumes de dados, mas excelente para troca segura de chaves e autenticação.
+
+23. Como a integridade dos dados é mantida durante a criptografia e descriptografia?
+    Durante a criptografia e descriptografia, qualquer alteração nos dados criptografados resultará em uma falha na descriptografia, indicando que a integridade dos dados foi comprometida.
+
+24. Por que é importante inicializar corretamente os objetos Cipher no modo apropriado?
+    Inicializar corretamente os objetos Cipher no modo apropriado (criptografia ou descriptografia) é crucial para garantir que os dados sejam processados corretamente e a segurança da criptografia seja mantida.
+
+25. Quais são os riscos de usar chaves criptográficas fracas ou previsíveis?
+    Chaves fracas ou previsíveis são suscetíveis a ataques de força bruta ou outros métodos de quebra de criptografia, comprometendo a segurança dos dados criptografados.
+
+26. O que é a codificação Base64 e por que é utilizada na criptografia?
+    Base64 é um método de codificação que converte dados binários em texto ASCII. É usado na criptografia para garantir que os dados criptografados possam ser transmitidos ou armazenados em sistemas que não suportam dados binários.
+
+27. Como a criptografia ponta a ponta garante a segurança das comunicações?
+    Na criptografia ponta a ponta, os dados são criptografados no dispositivo do remetente e só podem ser descriptografados no dispositivo do destinatário, garantindo que nenhum intermediário possa acessar os dados.
+
+28. Qual é a diferença entre criptografia e hashing?
+    Criptografia é o processo de transformar dados legíveis em um formato ilegível que pode ser revertido com uma chave de descriptografia. Hashing é uma transformação unidirecional que converte dados em um valor fixo (hash) que não pode ser revertido.
+
+29. Quais são os desafios na implementação de criptografia assimétrica?
+    Desafios incluem a gestão segura de chaves, o desempenho computacional devido à natureza intensiva do algoritmo e garantir que as chaves privadas não sejam comprometidas.
+
+30. Como a criptografia pode ser integrada a outros métodos de segurança, como assinaturas digitais?
+    A criptografia pode ser usada juntamente com assinaturas digitais para autenticação e integridade de dados. Uma assinatura digital é criada criptografando um hash dos dados com a chave privada do remetente, que pode ser verificado pelo destinatário com a chave pública do remetente.
+*/
