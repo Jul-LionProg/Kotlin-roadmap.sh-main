@@ -131,3 +131,12 @@ fun main () {
 
 13. Explique como o método decryptSymmetricKey() descriptografa uma chave secreta.
     O método decryptSymmetricKey() usa a chave privada RSA para descriptografar uma chave secreta AES criptografada com a chave pública, decodifica a chave criptografada em Base64 e processa com um objeto Cipher no modo de descriptografia, retornando a chave AES original.
+
+14. Quais são as etapas envolvidas na descriptografia de uma mensagem no script?
+    Primeiro, a mensagem criptografada em Base64 é decodificada. Em seguida, a mensagem decodificada é descriptografada com a chave privada RSA para recuperar os dados originais. Se uma chave AES foi usada, a chave AES é primeiro descriptografada com a chave privada RSA, depois os dados são descriptografados com a chave AES.
+
+15. Como a criptografia RSA garante a segurança na transmissão de chaves AES?
+    A chave pública RSA criptografa a chave AES, garantindo que apenas o destinatário com a chave privada RSA possa descriptografar e acessar a chave AES, proporcionando uma camada adicional de segurança na transmissão de chaves.
+
+16. Qual é a importância de usar tamanhos de chave adequados em RSA e AES?
+    Tamanhos de chave maiores aumentam a segurança criptográfica. Em RSA, chaves de 2048 bits são comumente usadas para um bom equilíbrio entre segurança e desempenho. Em AES, chaves de 256 bits são preferidas para máxima segurança.
