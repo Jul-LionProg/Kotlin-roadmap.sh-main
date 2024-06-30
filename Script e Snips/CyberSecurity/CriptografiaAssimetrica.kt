@@ -25,3 +25,10 @@ object AsymmetricCryptoUtil {
         keyGen.init(256)
         return keyGen.generateKey()
     }
+
+    fun encryptWithPublicKey(data: String, publicKey: PublicKey): String {
+        val cipher = Cipher.getInstance(RSA_ALGORITHM)
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey)
+        val encryptedBytes = cipher.doFinal(data.toByteArray())
+        return Base64.getEncoder().encodeToString(encryptedBytes)
+    }
