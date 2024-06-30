@@ -19,3 +19,9 @@ object AsymmetricCryptoUtil {
         keyPairGenerator.initialize(2048)
         return keyPairGenerator.generateKeyPair()
     }
+
+    fun generateSymetricKey(): SecretKey {
+        val keyGen = KeyGenerator.getInstance(ALGORITHM)
+        keyGen.init(256)
+        return keyGen.generateKey()
+    }
