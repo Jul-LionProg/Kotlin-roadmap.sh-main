@@ -101,3 +101,12 @@ fun main () {
 
 3. Por que o RSA é uma escolha popular para criptografia assimétrica?
    O RSA é amplamente usado devido à sua robustez e segurança, baseada na dificuldade de fatorar grandes números primos. Isso torna ataques de força bruta inviáveis para chaves de tamanho adequado.
+
+4. Como funciona o algoritmo AES e por que é usado juntamente com RSA?
+   O AES é um algoritmo de criptografia simétrica rápido e eficiente para grandes volumes de dados. Em combinação com RSA, AES criptografa os dados reais e RSA criptografa a chave AES, unindo velocidade e segurança na troca de chaves.
+
+5. O que faz o método generateKeyPair() na classe CryptographyUtil?
+   O método generateKeyPair() gera um par de chaves RSA (pública e privada) usando um gerador de chaves configurado com 2048 bits, considerado seguro para a maioria das aplicações.
+
+6. Como a chave simétrica AES é gerada no script?
+   A chave AES é gerada pelo método generateSymmetricKey(), que usa um gerador de chaves configurado com 256 bits, garantindo forte segurança para a criptografia de dados.
