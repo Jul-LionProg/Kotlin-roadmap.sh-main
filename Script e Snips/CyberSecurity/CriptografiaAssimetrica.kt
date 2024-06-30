@@ -140,3 +140,15 @@ fun main () {
 
 16. Qual é a importância de usar tamanhos de chave adequados em RSA e AES?
     Tamanhos de chave maiores aumentam a segurança criptográfica. Em RSA, chaves de 2048 bits são comumente usadas para um bom equilíbrio entre segurança e desempenho. Em AES, chaves de 256 bits são preferidas para máxima segurança.
+
+17. O que acontece se a chave privada RSA for comprometida?
+    Se a chave privada RSA for comprometida, qualquer pessoa com essa chave pode descriptografar dados criptografados com a chave pública correspondente, comprometendo a segurança das comunicações.
+
+18. Por que é recomendado usar um gerador de números aleatórios seguro para gerar chaves criptográficas?
+    Um gerador de números aleatórios seguro garante que as chaves geradas sejam imprevisíveis e resistentes a ataques, aumentando a segurança da criptografia.
+
+19. Quais são os principais casos de uso para a criptografia assimétrica?
+    Criptografia assimétrica é usada para troca segura de chaves, assinaturas digitais, autenticação e criptografia de dados confidenciais onde a troca segura de chaves é crucial.
+
+20. Como a combinação de criptografia simétrica e assimétrica melhora a eficiência e segurança?
+   
